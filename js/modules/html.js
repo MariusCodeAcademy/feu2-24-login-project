@@ -1,6 +1,6 @@
-export function crEl(tagName, dest, className, text) {
+export function crEl(tagName, dest, elementClass, text) {
   const el = document.createElement(tagName);
-  if (className) el.className = className;
+  if (elementClass) el.className = elementClass;
   if (text || text === 0) el.textContent = text;
   dest.append(el);
   // console.log(el);
@@ -15,11 +15,11 @@ export function generateUserList(arr) {
 
 /* 
 <article>
-      <img src="" alt="" class="card__img">
-      <h3 class="card__title">title</h3>
-      <p class="card__text1"><i>email</i></p>
-      <p class="card__text2">id</p>
-    </article>
+  <img src="" alt="" class="card__img">
+  <h3 class="card__title">title</h3>
+  <p class="card__text1"><i>email</i></p>
+  <p class="card__text2">id</p>
+</article>
 */
 
 function generateCard(obj) {
