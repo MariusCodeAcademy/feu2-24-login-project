@@ -9,7 +9,7 @@ const loginForm = document.forms[0];
 // parsisiusti visus vartotojus https://reqres.in/api/users?page=1
 
 getData('https://reqres.in/api/users?page=1').then((dataInJs) => {
-  console.log('dataInJs ===', dataInJs.data);
+  // console.log('dataInJs ===', dataInJs.data);
 });
 
 const age = 45; // nesimato per konsole
