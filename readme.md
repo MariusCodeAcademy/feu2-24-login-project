@@ -13,6 +13,6 @@
 4. siuntimo metu surinkti visas ivesties lauku reiksmes.
 5. siuntimo metu patikrinti ar sutampa slaptazodziai. 
 6. jei nesutampa pranesti vartotojui.
-7. jei sutampa siusti formos duomenis i https://reqres.in/api/register 
+7. jei sutampa siusti formos duomenis siunciam su POST i https://reqres.in/api/register 
 8. jei email bus eve.holt@reqres.in turetumet gauti sekminga atsakyma ir naviguoti i index.html prisijungimui
 9. jei klaida pranesti su feedback

@@ -1,4 +1,7 @@
 import { goTo, clearMyStorage } from './modules/helper.js';
+import { getData } from './modules/fetch.js';
+import { generateUserList } from './modules/html.js';
+
 console.log('user.js');
 
 // userToken localStorage, jei turim tai ok,
@@ -29,3 +32,18 @@ function logoutHandler() {
   // redirectinti i index.html
   goTo('index.html');
 }
+
+// parsisiusti userius
+// parsisiusti visus vartotojus https://reqres.in/api/users?page=1
+
+// getData('https://reqres.in/api/users?page=1').then((dataInJs) => {
+//   console.log('dataInJs ===', dataInJs.data);
+// });
+
+async function init() {
+  const dataInJs = await getData('https://reqres.in/api/users?page=1');
+  console.log('dataInJs ===', dataInJs.data);
+  generateUserList(dataInJs.data);
+}
+
+init();
