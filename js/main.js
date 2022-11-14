@@ -1,4 +1,6 @@
 import { getData } from './modules/fetch.js';
+import { takeInputs } from './modules/helper.js';
+
 console.log('main.js');
 
 // taikomes
@@ -19,7 +21,11 @@ loginForm.addEventListener('submit', loginHandler);
 
 function loginHandler(event) {
   // sustabdyti forma
+  event.preventDefault();
   // surinkti inputus
+  console.log('sending');
+  const loginObj = takeInputs(loginForm);
+  console.log('loginObj ===', loginObj);
 }
 
 // issiusti prisiloginti POST https://reqres.in/api/login
