@@ -1,1 +1,16 @@
 @import 'reset.css';
+
+.alert {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.alert--success {
+  border-color: green;
+  color: green;
+}
+.alert--fail {
+  border-color: tomato;
+  color: tomato;
+}
