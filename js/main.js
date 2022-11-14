@@ -1,4 +1,4 @@
-import { getData } from './modules/fetch.js';
+import { getData, sendPost } from './modules/fetch.js';
 import { takeInputs } from './modules/helper.js';
 
 console.log('main.js');
@@ -19,13 +19,22 @@ console.log('age ===', age);
 
 loginForm.addEventListener('submit', loginHandler);
 
-function loginHandler(event) {
+async function loginHandler(event) {
   // sustabdyti forma
   event.preventDefault();
   // surinkti inputus
   console.log('sending');
   const loginObj = takeInputs(loginForm);
   console.log('loginObj ===', loginObj);
+  const sendResult = await sendPost('https://reqres.in/api/login', loginObj);
+  console.log('sendResult ===', sendResult);
+  if (sendResult.error) {
+    // klaida, nusiunciant duomenis arba serveryje.
+    console.warn('klaida', sendResult.error);
+  } else {
+    // nera klaidos sekmingai prisiloginome.
+    console.log('sekme');
+  }
 }
 
 // issiusti prisiloginti POST https://reqres.in/api/login
