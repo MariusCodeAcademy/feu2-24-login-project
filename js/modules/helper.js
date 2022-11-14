@@ -6,3 +6,7 @@ export function takeInputs(formObj) {
   };
   return userObj;
 }
+
+export function goTo(where) {
+  window.location.href = where;
+}

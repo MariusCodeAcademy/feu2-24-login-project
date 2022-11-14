@@ -1,3 +1,4 @@
+import { goTo } from './modules/helper.js';
 console.log('user.js');
 
 // userToken localStorage, jei turim tai ok,
@@ -9,7 +10,8 @@ console.log('token ===', token);
 // pasitikrinti ar turim token
 if (token === null) {
   alert('Please login');
-  window.location.href = 'index.html';
+  // window.location.href = 'index.html';
+  goTo('index.html');
 }
 
 const userEmail = localStorage.getItem('userEmail');
