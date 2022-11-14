@@ -34,6 +34,11 @@ async function loginHandler(event) {
   } else {
     // nera klaidos sekmingai prisiloginome.
     console.log('sekme');
+    // naviguoti i users-only.html
+    window.location.href = 'user-only.html';
+    // issaugoti token
+    localStorage.setItem('userToken', sendResult.token);
+    localStorage.setItem('userEmail', loginObj.email);
   }
 }
 
